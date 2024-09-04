@@ -1,14 +1,16 @@
-name: learn-github-actions
+name: Continuous Integration
 on: [push]
 jobs:
-  job1:
+  CI_Steps:
     runs-on: ubuntu-latest
     steps:
-      - name: code checkout
+      - name: Code Checkout
         uses: actions/checkout@v4
-      - run: echo hello world
-        name: Run echo command
-      - run : find .
-        name: List files
-
-
+      - run: echo OK
+        name: Code Build
+      - run: echo OK
+        name: Code Test
+      - run: echo OK
+        name: Code Review
+      - run: echo OK
+        name: Release Software
