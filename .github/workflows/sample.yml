@@ -4,8 +4,11 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: code checkout
+      - name: code checkout
+      - uses: actions/checkout@v4
       - run: echo hello world
-      - run : ls -Al
+        name: Run echo command
+      - run : find .
+        name: List files
 
 
